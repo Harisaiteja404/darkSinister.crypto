@@ -1,2 +1,2 @@
 # darkSinister.crypto
-It a fake dark web test
+It is a fake dark web test
