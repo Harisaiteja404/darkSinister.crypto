@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-image: url('skull_bg.jpg'); /* Replace 'skull_bg.jpg' with your image file path */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .container {
+      text-align: center;
+    }
+    .container h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+      color: #FF0303;
+      text-shadow: 2px 2px 4px #000; /* Add black outline */
+    }
+    .container p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #00FF00;;
+      text-shadow: 2px 2px 4px #000;
+    }
+    .container input[type="text"],
+    .container input[type="password"],
+    .container button {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    .container button {
+      margin-left: 10px; /* Add margin between text boxes and button */
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #FF0303; /* Black background color */
+      color: #fff; /* White text color */
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .container button:hover {
+      background-color: #333; /* Darken the background color on hover */
+    }
+
+    .loading-container {
+      display: none; /* Initially hide the loading container */
+      margin-top: 20px;
+    }
+
+    .loading-bar {
+      width: 0;
+      height: 10px;
+      background-color: #007acc;
+      animation: loading 5s linear forwards; /* Animation duration: 5 seconds */
+    }
+
+    .loading-text {
+      margin-top: 10px;
+      color: #00FF00; /* Dark web green */
+    }
+
+    @keyframes loading {
+      0% { width: 0; }
+      100% { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>DARK WEB</h1>
+    <p id="p1">Enter DarkNet Keys to Access</p>
+    <form id="login-form">
+      <input type="text" id="username" name="username" required><br>
+      <input type="password" id="password" name="password" required><br>
+      <button id="login-btn" type="button">Login</button>
+    </form>
+    <div class="loading-container" id="loading-container">
+      <div class="loading-bar"></div>
+      <div class="loading-text">Loading...</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('login-btn').addEventListener('click', function() {
+      // Show loading animation
+      document.getElementById('loading-container').style.display = 'block';
+
+      // Hide form elements
+      document.getElementById('login-form').style.display = 'none';
+
+      // Disable the button to prevent multiple submissions
+      this.disabled = true;
+
+	document.getElementById("p1").innerHTML = "<br>";
+      // Simulate form submission delay (for demonstration purpose)
+      let progress = 0;
+      const progressBar = document.querySelector('.loading-bar');
+      const loadingText = document.querySelector('.loading-text');
+      const interval = setInterval(function() {
+        progress += 1;
+        progressBar.style.width = progress + '%';
+        loadingText.textContent = 'Loading ... ' + progress + '%';
+        if (progress >= 100) {
+          clearInterval(interval);
+          // Redirect to another page after 5 seconds
+          window.location.href = 'Sinister_links.html';
+        }
+      }, 50); // Update every 50 milliseconds
+    });
+  </script>
+
+</body>
+</html>

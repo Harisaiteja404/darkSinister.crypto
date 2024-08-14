@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-image: url('skull_bg.jpg'); /* Replace 'background-image.jpg' with your image file path */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .container {
+      text-align: center;
+    }
+    .container h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #FF0303;
+      text-shadow: 2px 2px 4px #000; /* Add black outline */
+    }
+    .container p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #FF0303;
+    }
+    .container input[type="text"],
+    .container input[type="password"],
+    .container button {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    .container input[type="text"],
+    .container input[type="password"] {
+      margin-right: 10px; /* Add margin between text boxes and button */
+    }
+    .container button {
+      margin-left: 10px; /* Add margin between text boxes and button */
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #000; /* Black background color */
+      color: #fff; /* White text color */
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .container button:hover {
+      background-color: #333; /* Darken the background color on hover */
+    }
+
+    .loading-container {
+      display: none; /* Initially hide the loading container */
+      margin-top: 20px;
+    }
+
+    .loading-spinner {
+      border: 8px solid rgba(255, 255, 255, 0.3); /* Light gray border */
+      border-top: 8px solid #fff; /* White top border */
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite; /* Rotate animation */
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Dark web green color for loading text */
+    .loading-container p {
+      color: #00FF00; /* Dark web green */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>DARK WEB</h1>
+    <p>Enter DarkNet Keys to Access</p>
+    <form id="login-form">
+      <input type="text" id="username" name="username" required>
+      <input type="password" id="password" name="password" required>
+      <button id="login-btn" type="button">Login</button>
+    </form>
+    <div class="loading-container" id="loading-container">
+      <div class="loading-spinner"></div>
+      <p>Searching access point and loading...</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('login-btn').addEventListener('click', function() {
+      // Show loading animation
+      document.getElementById('loading-container').style.display = 'block';
+
+      // Hide form elements
+      document.getElementById('login-form').style.display = 'none';
+
+      // Disable the button to prevent multiple submissions
+      this.disabled = true;
+
+      // Simulate form submission delay (for demonstration purpose)
+      setTimeout(function() {
+        // Submit the form after animation completes
+        document.getElementById('login-form').submit();
+      }, 5000); // 5 seconds delay (same as animation duration)
+    });
+  </script>
+</body>
+</html>
