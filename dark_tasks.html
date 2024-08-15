@@ -36,7 +36,7 @@
     .heading {
       font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       text-align: center;
-      font-size: 50px;
+      font-size: 4vw;/* responsive*/
       padding: 20px 0;
       position: fixed;
       width: 100%;
@@ -56,19 +56,14 @@
     .task-item {
       text-align: center;
       padding: 2%;
+      flex:1 1 45%
+      max-width: 45%
     }
     .task-item img {
       max-width: 100%;
       height: auto;
     }
-    /* .B_tn{
-            cursor: pointer;
-            border-radius: 10%;
-            min-height: 50px;
-            min-width: 70px;
-            font-size: large;
-            background-color: red;
-        } */
+    
         .B_tn:hover{
             background-color:#3232f9;
       transition: 0.7s;
@@ -103,6 +98,24 @@ img {
   margin-bottom: 0%;
   font-size: 25px;
 }
+    @media screen and (max-width: 768px){
+      .task-item {
+        flex: 1 1 100%; /* Full width on smaller screens */
+        max-width: 100%;
+      }
+      .heading {
+        font-size: 6vw; /* Adjust heading size on smaller screens */
+      }
+    }
+        @media screen and (max-width: 480px) {
+      .task-item {
+        flex: 1 1 100%; /* Full width for mobile devices */
+        max-width: 100%;
+      }
+      .heading {
+        font-size: 8vw; /* Adjust heading size further for smaller devices */
+      }
+    }
   </style>
       <script src="https://kit.fontawesome.com/aaa0a72cb3.js" crossorigin="anonymous"></script>
 </head>
@@ -111,8 +124,6 @@ img {
 <div class="background-container"></div>
 
 <h1 class="heading">Dark Web Catloge</h1>
-
-
 
 <div class="task-list-container">
   <div class="task-row">
