@@ -17,88 +17,81 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url('istockphoto-877011124-612x612.jpg'); /* Replace 'wp2758004.jpg' with your image file path */
-      background-size:cover;
+      background-image: url('istockphoto-877011124-612x612.jpg'); 
+      background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       z-index: -1;
-       /* Ensure the background is behind the content */
     }
     .task-list-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      overflow-y: auto; /* Enable vertical scrolling */
-      height: 100%; 
-      padding-top: 65%;
+      overflow-y: auto;
+      height: 100%;
+      padding-top: 15%;
     }
     .heading {
-      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
       text-align: center;
-      font-size: 4vw;/* responsive*/
+      font-size: 4vw; /* Responsive font size */
       padding: 20px 0;
       position: fixed;
       width: 100%;
-      overflow: hidden;
       top: 0;
       z-index: 1;
-      background-color:#00316E;
-      box-sizing: border-box;
+      background-color: #00316E;
       margin: 0;
+      box-sizing: border-box;
     }
     .task-row {
       display: flex;
       justify-content: space-around;
-      width: 80%; /* Adjust as needed */
+      width: 100%;
       margin-bottom: 20px;
+      flex-wrap: wrap; /* Allow wrapping for smaller screens */
     }
     .task-item {
       text-align: center;
-      padding: 2%;
-      flex:1 1 22%
-      max-width: 22%
-      min-width:22%
+      padding: 10px;
+      flex: 1 1 22%; /* Adjust item size for responsiveness */
+      max-width: 22%; /* Limit max size */
     }
     .task-item img {
       max-width: 100%;
       height: auto;
     }
-        .B_tn:hover{
-            background-color:#3232f9;
-      transition: 0.7s;
-        }
-.B_tn {
-  background: #ff0000;
-  border-radius: 999px;
-  box-shadow: #3232f9 0 10px 20px -10px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  opacity: 1;
-  outline: 0 solid transparent;
-  padding: 8px 18px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: fit-content;
-  word-break: break-word;
-  border: 0;
-}
-img {
-  box-shadow: 0 4px 8px 0 #ff000099, 0 6px 20px 0 #ff000099;
-  filter: blur(4px);
-}
-.price{
-  margin-top: 5px;
-  margin-bottom: 0%;
-  font-size: 25px;
-}
-    @media screen and (max-width: 768px){
+    .B_tn {
+      background: #ff0000;
+      border-radius: 999px;
+      box-shadow: #3232f9 0 10px 20px -10px;
+      color: #FFFFFF;
+      cursor: pointer;
+      font-family: Inter, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      padding: 8px 18px;
+      width: fit-content;
+      border: 0;
+      transition: background-color 0.7s;
+    }
+    .B_tn:hover {
+      background-color: #3232f9;
+    }
+    img {
+      box-shadow: 0 4px 8px 0 #ff000099, 0 6px 20px 0 #ff000099;
+      filter: blur(4px);
+    }
+    .price {
+      margin-top: 5px;
+      margin-bottom: 0;
+      font-size: 25px;
+    }
+    
+    /* Media Queries for Responsiveness */
+    @media screen and (max-width: 768px) {
       .task-item {
         flex: 1 1 45%; /* Full width on smaller screens */
         max-width: 45%;
@@ -107,7 +100,7 @@ img {
         font-size: 6vw; /* Adjust heading size on smaller screens */
       }
     }
-        @media screen and (max-width: 480px) {
+    @media screen and (max-width: 480px) {
       .task-item {
         flex: 1 1 100%; /* Full width for mobile devices */
         max-width: 100%;
@@ -117,19 +110,18 @@ img {
       }
     }
   </style>
-      <script src="https://kit.fontawesome.com/aaa0a72cb3.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/aaa0a72cb3.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <div class="background-container"></div>
 
-<h1 class="heading">Dark Web Catloge</h1>
+<h1 class="heading">Dark Web Catalog</h1>
 
 <div class="task-list-container">
   <div class="task-row">
     <div class="task-item">
-      <img src="dark1.jpg" alt="Task 2">
-      </a>
+      <img src="dark1.jpg" alt="Task 1">
       <p class="price">2 <i class='fab fa-bitcoin' style='color:rgb(255, 230, 0)'></i></p>
       <p class="note">*Payments should be in cryptocurrency only</p>
       <button class="B_tn"><i class='fas fa-bomb' style='color:black'></i><b> Initiate Task</b></button>
@@ -195,70 +187,15 @@ img {
     </div>
     <div class="task-item">
       <img src="dark11.jpg" alt="Task 11">
-      <p class="price">4 <i class='fab fa-bitcoin' style='color:rgb(255, 230, 0)'></i></p>
+      <p class="price">1 <i class='fab fa-bitcoin' style='color:rgb(255, 230, 0)'></i></p>
       <p class="note">*Payments should be in cryptocurrency only</p>
-      <button class="B_tn"><i class='fas fa-dungeon' style='color:black'></i><b> Initiate Task</b></button>
+      <button class="B_tn"><i class='fas fa-drumstick-bite' style='color:black'></i><b> Initiate Task</b></button>
     </div>
     <div class="task-item">
       <img src="dark12.jpg" alt="Task 12">
-      <p class="price">10 <i class='fab fa-bitcoin' style='color:rgb(255, 230, 0)'></i></p>
-      <p class="note">*Payments should be in cryptocurrency only</p>
-      <button class="B_tn"><i class='fas fa-knife' style='color:black'></i><b> Initiate Task</b></button>
-    </div>
-  </div>
-
-  <div class="task-row">
-    <div class="task-item">
-      <a href="#"><img src="dark13.jpg" alt="Task 1">
-      </a>
       <p class="price">6 <i class='fab fa-bitcoin' style='color:rgb(255, 230, 0)'></i></p>
       <p class="note">*Payments should be in cryptocurrency only</p>
-      <button class="B_tn"><i class='fas fa-bomb' style='color:black'></i><b> Initiate Task</b></button>
-    </div>
-    <div class="task-item">
-      <img src="dark14.jpg" alt="Task 2">
-      <p class="price">9 <i class='fab fa-bitcoin' style='color:rgb(255, 230, 0)'></i></p>
-      <p class="note">*Payments should be in cryptocurrency only</p>
-      <button class="B_tn"><i class='fas fa-viruses' style='color:black'></i><b> Initiate Task</b></button>
-    </div>
-    <div class="task-item">
-      <img src="dark15.jpg" alt="Task 3">
-      <p class="price">6 <i class='fab fa-bitcoin' style='color:rgb(255, 230, 0)'></i></p>
-      <p class="note">*Payments should be in cryptocurrency only</p>
-      <button class="B_tn"><i class='fas fa-book-dead' style='color:black'></i><b> Initiate Task</b></button>
-    </div>
-    <div class="task-item">
-      <img src="dark16.jpg" alt="Task 4">
-      <p class="price">8 <i class='fab fa-bitcoin' style='color:rgb(255, 230, 0)'></i></p>
-      <p class="note">*Payments should be in cryptocurrency only</p>
-      <button class="B_tn"><i class='fas fa-skull-crossbones' style='color:black'></i><b> Initiate Task</b></button>
-    </div>
-  </div>
-
-  <div class="task-row">
-    <div class="task-item">
-      <img src="dark17.jpg" alt="Task 5">
-      <p class="price">3 <i class='fab fa-bitcoin' style='color:rgb(255, 230, 0)'></i></p>
-      <p class="note">*Payments should be in cryptocurrency only</p>
-      <button class="B_tn"><i class='fas fa-vial' style='color:black'></i><b> Initiate Task</b></button>
-    </div>
-    <div class="task-item">
-      <img src="dark18.jpg" alt="Task 6">
-      <p class="price">1 <i class='fab fa-bitcoin' style='color:rgb(255, 230, 0)'></i></p>
-      <p class="note">*Payments should be in cryptocurrency only</p>
-      <button class="B_tn"><i class='fas fa-fingerprint' style='color:black'></i><b> Initiate Task</b></button>
-    </div>
-    <div class="task-item">
-      <img src="dark19.jpg" alt="Task 7">
-      <p class="price">7 <i class='fab fa-bitcoin' style='color:rgb(255, 230, 0)'></i></p>
-      <p class="note">*Payments should be in cryptocurrency only</p>
-      <button class="B_tn"><i class='fas fa-mask' style='color:black'></i><b> Initiate Task</b></button>
-    </div>
-    <div class="task-item">
-      <img src="dark20.jpg" alt="Task 8">
-      <p class="price">9 <i class='fab fa-bitcoin' style='color:rgb(255, 230, 0)'></i></p>
-      <p class="note">*Payments should be in cryptocurrency only</p>
-      <button class="B_tn"><i class='fas fa-user-secret' style='color:black'></i><b> Initiate Task</b></button>
+      <button class="B_tn"><i class='fas fa-crosshairs' style='color:black'></i><b> Initiate Task</b></button>
     </div>
   </div>
 </div>
