@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark_S_Room</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: black;
+        }
+
+        #top_div {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 10px 0px;
+            background-color: #00295D;
+            width: 100%;
+            height: max-content;
+            z-index: 1000;
+            box-sizing: border-box;
+            height: fit-content;
+        }
+
+        #top_div h1 {
+            margin: 0;
+            font-size: 3.3vw;
+            color: white;
+            padding-left: 10px;
+            text-align: center;
+            line-height: 3.5vw;
+        }
+
+        img.Myst_img {
+            width: 300px;
+            height: 250px;
+        }
+
+        #Grid_container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 65px;
+            padding: 30px;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 3.5vw;
+            padding-top: 50px;
+        }
+
+        .Grid_item {
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        button.Myst_btn {
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #ed3f3f;
+            cursor: pointer;
+            border: 3px solid;
+            padding: 0.25em 0.5em;
+            box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+            user-select: none;
+            position: relative;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        button.Myst_btn:active {
+            box-shadow: 0px 0px 0px 0px;
+            top: 5px;
+            left: 5px;
+        }
+
+        p.Myst_p {
+            color: white;
+            margin: 5px 0px;
+        }
+
+        span.Myst_code {
+            color: black;
+            background: rgba(255, 255, 0, 0.566);
+        }
+
+        p.btn_price {
+            color: white;
+            font-size: 20px;
+            margin: 5px 0px;
+        }
+
+        @media (max-width: 768px) {
+            #Grid_container {
+                grid-template-columns: repeat(2, 1fr);
+                /* 2 columns in a row */
+            }
+
+            button.Myst_btn {
+                box-shadow: 0px 0px 0px 0px;
+                top: 5px;
+                left: 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #Grid_container {
+                grid-template-columns: 1fr;
+                /* 1 column in a row */
+            }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/aaa0a72cb3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="top_div">
+        <h1 style="margin: 0;">
+            Sinister Mystery Boxes
+        </h1>
+    </div>
+    <div id="Grid_container">
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span> <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn" type="button">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+        <div class="Grid_item">
+            <img src="./nature_sample.jpg" class="Myst_img" alt="">
+            <p class="Myst_p">Task_code: <span class="Myst_code"> STX7852 </span></p>
+            <p class="btn_price"><span class="cost_spn">0.23</span>  <i class="fa-brands fa-bitcoin" style="color: #FFD43B;font-size: 15px;"></i></p>
+            <button class="Myst_btn">Button1</button>
+        </div>
+    </div>
+    <script src="/JavaScripts/S_room_script.js"></script>
+    <noscript>Sorry, JS is not executing</noscript>
+</body>
+
+</html>
