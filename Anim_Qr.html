@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Web Loading Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('/skull_bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .loading-container, .qr-container, .timer-container {
+            text-align: center;
+        }
+
+        .circle-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            animation: pulse 1.5s infinite;
+        }
+
+        .circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+
+        .circle:nth-child(1) {
+            background-color: blue;
+            animation: rotate 2s linear infinite;
+        }
+
+        .circle:nth-child(2) {
+            background-color: black;
+            animation: rotate 2.5s linear reverse infinite;
+        }
+
+        .circle:nth-child(3) {
+            background-color: white;
+            animation: rotate 3s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .loading-text {
+            margin-top: 20px;
+            font-size: 18px;
+            opacity: 0;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); opacity: 0.8; }
+            100% { text-shadow: 0 0 20px rgba(255, 255, 255, 1); opacity: 1; }
+        }
+
+        .timer {
+            margin-top: 30px;
+            font-size: 20px;
+            color: red;
+            display: none;
+        }
+
+        .failure-message {
+            margin-top: 30px;
+            font-size: 26px;
+            color: red;
+            display: none;
+        }
+        
+        .qr-container {
+            margin-top: 30px;
+            display: none;
+        }
+    </style>
+    <!-- Include the qrcode.min.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+<div class="loading-container">
+    <div class="circle-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    
+    <div class="loading-text" id="loading-text"></div>
+</div>
+
+<div class="qr-container" id="qrcode"></div>
+
+<div class="timer-container">
+    <div class="timer" id="timer">20</div>
+    <div class="failure-message" id="failure-message">Fund Transfer Failed</div>
+</div>
+
+<script>
+    const loadingTextElement = document.getElementById('loading-text');
+    const texts = [
+        "Encrypting and making security checks.",
+        "Establishing security layers.",
+        "Generating Encrypted QR code."
+    ];
+    let textIndex = 0;
+
+    function displayTextSequentially() {
+        if (textIndex < texts.length) {
+            loadingTextElement.textContent = texts[textIndex];
+            loadingTextElement.style.opacity = 1; // Ensure text appears
+            textIndex++;
+            setTimeout(displayTextSequentially, 3000); // Delay for 3 seconds between texts
+        } else {
+            document.querySelector('.loading-container').style.display = 'none'; // Hide the animation
+            generateQRCode(); // Show the QR code after all texts
+            document.querySelector('.qr-container').style.display = 'block'; // Display QR code container
+            startTimer(); // Start the timer after QR code appears
+        }
+    }
+
+    // Start displaying text after a short delay
+    setTimeout(displayTextSequentially, 1000); // Start after 1 second
+
+    // Function to generate QR code
+    function generateRandomString(prefix, length) {
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let randomString = prefix;
+        for (let i = 0; i < length; i++) {
+            randomString += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+        return randomString;
+    }
+
+    function generateQRCode() {
+        const taskID = generateRandomString('stx', 4); // Random Task ID like stx9874
+        const bitcoinAccount = generateRandomString('', 8); // Random Bitcoin Account
+
+        const qrData = `Task_id=${taskID}&Bitcoin_account=${bitcoinAccount}`;
+        
+        // Clear previous QR code
+        document.getElementById("qrcode").innerHTML = "";
+
+        // Generate new QR code
+        new QRCode(document.getElementById("qrcode"), qrData);
+    }
+
+    // Function to start the timer
+    function startTimer() {
+        let timeLeft = 20;
+        const timerElement = document.getElementById('timer');
+        const failureMessageElement = document.getElementById('failure-message');
+        
+        timerElement.style.display = 'block'; // Show the timer
+        const countdown = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = timeLeft;
+
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                failureMessageElement.style.display = 'block'; // Show failure message
+            }
+        }, 1000);
+    }
+</script>
+
+</body>
+</html>
